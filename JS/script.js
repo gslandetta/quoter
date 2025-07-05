@@ -58,8 +58,8 @@ cotizarBtn.addEventListener('click', () => {
   const entrada = Math.ceil(cuota * cuotasEntrega[plazo][entrega]);
 
   const mensajeExtra = plazo === 72
-    ? 'En caso de no tener entrada debe esperar al mes 25 de haber iniciado su financiamiento'
-    : 'En caso de no tener entrada debe esperar al mes 21 de haber iniciado su financiamiento';
+    ? 'En caso de entrada 0% debe esperar al mes 25 de haber iniciado su financiamiento'
+    : 'En caso de entrada 0% debe esperar al mes 21 de haber iniciado su financiamiento';
 
   resultadoDiv.innerHTML = `
     <table>
