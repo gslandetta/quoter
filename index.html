@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cotizador Web</title>
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cotizador</h1>
+
+    <label for="tipo">Seleccione el tipo de cotización:</label>
+    <select id="tipo">
+      <option value="">-- Seleccione --</option>
+      <option value="vehiculo">Vehículo</option>
+      <option value="casa">Casa</option>
+      <option value="remodelacion">Remodelación</option>
+    </select>
+
+    <div id="mensaje-cotizador" class="mensaje"></div>
+
+    <div id="form-vehiculo" class="hidden">
+      <label for="monto">Monto:</label>
+      <select id="monto"></select>
+
+      <label for="plazo">Plazo:</label>
+      <select id="plazo">
+        <option value="">-- Seleccione --</option>
+        <option value="60">60 meses</option>
+        <option value="72">72 meses</option>
+      </select>
+
+      <label for="entrega">Entrega al:</label>
+      <select id="entrega">
+        <option value="">-- Seleccione --</option>
+        <option value="4">4to mes</option>
+        <option value="7">7mo mes</option>
+        <option value="10">10mo mes</option>
+      </select>
+
+      <button id="cotizarBtn" class="hidden">Cotizar</button>
+    </div>
+
+    <div id="resultado" class="resultado hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
