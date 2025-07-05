@@ -65,20 +65,20 @@ cotizarBtn.addEventListener('click', () => {
     <table>
       <thead>
         <tr>
-          <th>Inscripción</th>
           <th>Cuota</th>
-          <th>Inscripción + Cuota Inicial</th>
-          <th>Final</th>
+          <th>Inscripción</th>
+          <th>Inscripción + Cuota</th>
           <th>Entrada</th>
+          <th>Final</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td data-label="Inscripción">$${inscripcion.toLocaleString()}</td>
           <td data-label="Cuota">$${cuota.toLocaleString()}</td>
-          <td data-label="Inscripción + Cuota Inicial">$${inscripcionMasCuota.toLocaleString()}</td>
-          <td data-label="Final">$${final.toLocaleString()}</td>
+          <td data-label="Inscripción">$${inscripcion.toLocaleString()}</td>
+          <td data-label="Inscripción + Cuota">$${inscripcionMasCuota.toLocaleString()}</td>
           <td data-label="Entrada">$${entrada.toLocaleString()}</td>
+          <td data-label="Final">$${final.toLocaleString()}</td>
         </tr>
       </tbody>
     </table>
