@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cotizador Web</title>
   <link rel="stylesheet" href="style/styles.css">
-  <meta name="description" content="Cotizador web para vehículos, casas y remodelaciones. Calcula tu cuota mensual fácilmente.">
+  <meta name="description"
+    content="Cotizador web para vehículos, casas y remodelaciones. Calcula tu cuota mensual fácilmente.">
   <meta name="keywords" content="cotizador, vehículo, casa, remodelación, cuota mensual, financiamiento">
   <meta name="author" content="Salvatore Landetta">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -14,6 +16,7 @@
   <div class="container">
     <h1>Cotizador</h1>
 
+    <!-- Tipo de cotización -->
     <label for="tipo">Seleccione el tipo de cotización:</label>
     <select id="tipo">
       <option value="">-- Seleccione --</option>
@@ -24,6 +27,7 @@
 
     <div id="mensaje-cotizador" class="mensaje"></div>
 
+    <!-- Formulario de Vehículo (solo Monto + Plazo) -->
     <div id="form-vehiculo" class="hidden">
       <label for="monto">Monto:</label>
       <select id="monto"></select>
@@ -35,18 +39,51 @@
         <option value="72">72 meses</option>
       </select>
 
-      <label for="entrega">Entrega programada al:</label>
+      <button id="cotizarBtn" class="hidden">Cotizar</button>
+    </div>
+
+    <!-- Tabla de resultados -->
+    <div id="resultado" class="resultado hidden"></div>
+
+    <!-- Selección de Entrega -->
+    <div id="entrega-section" class="hidden">
+      <label for="entrega">Entrega al:</label>
       <select id="entrega">
         <option value="">-- Seleccione --</option>
         <option value="4">4to mes</option>
         <option value="7">7mo mes</option>
         <option value="10">10mo mes</option>
       </select>
-
-      <button id="cotizarBtn" class="hidden">Cotizar</button>
     </div>
 
-    <div id="resultado" class="resultado hidden"></div>
+    <!-- Cuadro de Entrada -->
+    <div id="entrada-box" class="entrada hidden"></div>
+
+    <!-- 🔹 NUEVO: Botón para promo -->
+    <button id="promoBtn" class="hidden">Aplicar a la promo del mes</button>
+
+    <!-- 🔹 NUEVO: Formulario de datos del cliente -->
+    <div id="promo-form" class="promo-form hidden">
+      <h3>Datos del solicitante</h3>
+      <label>Nombre(s): <input id="nombre" required></label>
+      <label>Apellido(s): <input id="apellidos" required></label>
+      <label>Cédula (opcional): <input id="cedula" maxlength="13"></label>
+      <button id="promoContinueBtn">Continuar</button>
+    </div>
+
+    <!-- 🔹 NUEVO: Sección código + countdown -->
+    <div id="promo-code-section" class="promo-code hidden">
+      <p id="mensajePromo"></p>
+      <p>Tiempo restante: <span id="countdown">72:00:00</span></p>
+      <label>Ingrese su código promocional:
+        <input id="promoCodeInput">
+      </label>
+      <button id="promoCodeBtn">Validar código</button>
+      <p id="promoCodeMsg" class="mensaje"></p>
+    </div>
+
+    <!-- 🔹 NUEVO: Resultado final del pago promocional -->
+    <div id="promo-result" class="promo-result hidden"></div>
   </div>
 
   <script src="JS/script.js"></script>
